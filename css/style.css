@@ -1,1 +1,127 @@
+/* Custom properties */
 
+:root {
+  /* Colors */
+
+  --primary-blue: #755cde;
+  --primary-orange: #f6a560;
+  --primary-pink: #f39e9e;
+  --primary-red: #eb7565;
+  --primary-turquoise: #61c4b7;
+  --primary-violet: #552049;
+
+  --neutral-900: #030303;
+  --neutral-400: #7a746e;
+  --neutral-100: #fff7f0;
+
+  /* Font size */
+
+  --fs-900: clamp(2.25rem, calc(1.89rem + 1.79vw), 3.5rem);
+  --fs-750: clamp(1.63rem, calc(1.38rem + 1.25vw), 2.5rem);
+  --fs-600: clamp(1.5rem, calc(1.36rem + 0.71vw), 2rem);
+  --fs-400: clamp(1rem, calc(0.96rem + 0.19vw), 1.13rem);
+  --fs-300: clamp(0.88rem, calc(0.83rem + 0.19vw), 1rem);
+
+  --ff-ss: "Plus Jakarta Sans", sans-serif;
+
+  /* Font weight */
+
+  --fw-medium: 500;
+  --fw-bold: 700;
+}
+
+html {
+  /* font-size: 62.5%; */
+}
+
+body {
+  font-family: var(--ff-ss);
+  /* font-size: var(--fs-300); */
+  margin: clamp(1rem, calc(-2.28rem + 13.99vw), 10.31rem);
+}
+
+h1 {
+  font-size: var(--fs-900);
+  font-weight: var(--fw-bold);
+}
+
+h2 {
+  font-size: var(--fs-750);
+  font-weight: var(--fw-bold);
+}
+
+h3 {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-bold);
+}
+
+p {
+  font-size: var(--fs-400);
+  /* line-height: 1.555555556; */
+  line-height: calc(28px / var(--fs-400));
+}
+
+.logo {
+  /* height: clamp(4.8rem, calc(2.65rem + 1.5vw), 6.4rem); */
+  height: clamp(3rem, calc(2.65rem + 1.5vw), 4rem);
+}
+
+/* Composition */
+
+.main {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(5, auto);
+}
+
+.introduction,
+.services,
+.designer,
+.image-slide,
+.contact {
+  border: 3px solid black;
+}
+
+/* Utilities */
+
+.btn-1 {
+  color: var(--neutral-100);
+  background-color: var(--neutral-900);
+}
+
+.btn-1:hover {
+  color: var(--neutral-100);
+  background-color: var(--primary-blue);
+}
+
+.btn-2 {
+  color: var(--neutral-100);
+  background-color: var(--primary-red);
+}
+
+.btn-2:hover {
+  color: var(--neutral-100);
+  background-color: var(--primary-orange);
+}
+
+.btn {
+  font-size: var(--fs-300);
+  padding: clamp(0.5rem, calc(0.37rem + 0.56vw), 0.88rem)
+    clamp(1.69rem, calc(1.29rem + 1.69vw), 2.81rem);
+  border-radius: 2.8rem;
+}
+
+.arrow {
+  padding: 2.4rem;
+  border-radius: 50%;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

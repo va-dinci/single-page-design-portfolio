@@ -10,21 +10,26 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | Single-page design portfolio</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <button>O</button>
-        <button>Free Consultation</button>
-      </nav>
+    <header class="header">
+      <section class="banner">
+        <img class="logo" src="assets/logo.svg" alt="logo" />
+        <button class="btn btn-1">Free Consultation</button>
+      </section>
     </header>
 
-    <main>
-      <section>
+    <main class="main">
+      <section class="introduction">
         <h1>Design solutions made easy</h1>
         <p>
           With over ten years of experience in various design disciplines, I'm
@@ -32,7 +37,7 @@
         </p>
       </section>
 
-      <section>
+      <section class="services">
         <div>
           <h2>Graphic Design</h2>
         </div>
@@ -53,36 +58,36 @@
         </div>
       </section>
 
-      <section>
+      <section class="designer">
         <h2>I'm Amy, and I'd love to work on your next project</h2>
         <p>
           I love working with others to create beautiful design solutions. I've
           designed everything from brand illustrations to complete mobile apps.
           I'm also handy with a camera!
         </p>
-        <button>Free Consultation</button>
+        <button class="btn btn-2">Free Consultation</button>
       </section>
 
-      <section>
-        <h2>My Work</h2>
+      <section class="image-slide">
+        <h3>My Work</h3>
       </section>
     </main>
 
-    <footer>
-      <section>
-        <h2>Book a call with me</h2>
-        <p>
-          I'd love to have a chat to see how I can help you. The best first step
-          is for us to discuss your project during a free consultation. Then we
-          can move forward from there.
-        </p>
-        <button>Free Consultation</button>
-      </section>
+    <section class="contact">
+      <h2>Book a call with me</h2>
+      <p>
+        I'd love to have a chat to see how I can help you. The best first step
+        is for us to discuss your project during a free consultation. Then we
+        can move forward from there.
+      </p>
+      <button class="btn btn-2">Free Consultation</button>
+    </section>
 
-      <nav>
-        <button>O</button>
-        <button>Free Consultation</button>
-      </nav>
+    <footer class="footer">
+      <section class="banner">
+        <img class="logo" src="assets/logo.svg" alt="logo" />
+        <button class="btn btn-1">Free Consultation</button>
+      </section>
     </footer>
   </body>
 </html>
