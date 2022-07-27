@@ -171,6 +171,7 @@ p {
   margin-right: 0;
   margin-bottom: clamp(6.25rem, calc(5rem + 5.33vw), 7.5rem);
   text-align: center;
+  overflow: hidden;
 }
 
 .contact {
