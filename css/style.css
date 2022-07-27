@@ -35,6 +35,7 @@ body {
   background-color: var(--neutral-100);
   font-family: var(--ff-ss);
   font-size: var(--fs-400);
+  font-weight: var(--fw-medium);
   line-height: calc(
     clamp(1.63rem, calc(1.58rem + 0.19vw), 1.75rem) / var(--fs-400)
   );
@@ -72,11 +73,11 @@ h3 {
 }
 
 p {
+  color: var(--neutral-400);
 }
 
 /* Composition */
 
-.image-slide,
 .contact {
   border: 3px solid black;
 }
@@ -85,14 +86,8 @@ p {
   margin-bottom: clamp(2rem, calc(1.25rem + 3.19vw), 4.13rem);
 }
 
-.introduction h1 {
-  margin-bottom: clamp(1rem, calc(0.85rem + 0.66vw), 1.44rem);
-}
-
-.introduction p {
-  margin-left: clamp(1.81rem, calc(2.21rem + -1.69vw), 0.69rem);
-  margin-right: clamp(1.81rem, calc(2.21rem + -1.69vw), 0.69rem);
-  margin-bottom: clamp(2rem, calc(0.94rem + 4.51vw), 5rem);
+.introduction {
+  text-align: center;
 }
 
 .services {
@@ -103,43 +98,6 @@ p {
   margin-bottom: clamp(6.25rem, calc(5.37rem + 4.39vw), 8.5rem);
 }
 
-/* Utilities */
-.btn {
-  font-size: var(--fs-300);
-  padding: clamp(0.5rem, calc(0.37rem + 0.56vw), 0.88rem)
-    clamp(1.69rem, calc(1.29rem + 1.69vw), 2.81rem);
-  border-radius: 2.8rem;
-}
-
-.btn-1 {
-  color: var(--neutral-100);
-  background-color: var(--neutral-900);
-  border-color: var(--neutral-900);
-  border-style: solid;
-}
-
-.btn-2 {
-  color: var(--neutral-100);
-  background-color: var(--primary-red);
-  border-color: var(--primary-red);
-  border-style: solid;
-}
-
-.arrow {
-  padding: 2.4rem;
-  border-radius: 50%;
-}
-
-.logo {
-  height: clamp(3rem, calc(2.65rem + 1.5vw), 4rem);
-}
-
-/* Blocks */
-
-.introduction {
-  text-align: center;
-}
-
 .designer {
   text-align: center;
   margin-bottom: clamp(6.25rem, calc(4.16rem + 10.47vw), 9.06rem);
@@ -147,11 +105,51 @@ p {
   flex-direction: column;
 }
 
+.portfolio {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+}
+
+.contact {
+  background-color: var(--neutral-900);
+  color: var(--neutral-100);
+  border-radius: 0.5rem;
+  padding: clamp(3.06rem, calc(2.36rem + 3vw), 5.06rem) 0;
+}
+
+.contact p {
+  color: var(--neutral-100);
+}
+
+.portfolio h3 {
+  margin-bottom: clamp(2rem, calc(1.47rem + 2.25vw), 3.5rem);
+}
+
+.portfolio__slide {
+  display: flex;
+  margin-bottom: clamp(2rem, calc(1.47rem + 2.25vw), 3.5rem);
+  justify-content: center;
+}
+
+.portfolio__slide li:not(:last-child) {
+  margin-right: clamp(0.94rem, calc(0.61rem + 1.41vw), 1.88rem);
+}
+
+.portfolio__slide li {
+  max-width: 100%;
+}
+
+.portfolio__slide img {
+  border-radius: 0.5rem;
+  max-width: 72vw;
+  display: initial;
+}
+
 .card {
   font-size: var(--fs-500);
   font-weight: 900;
   padding: 1.5rem;
-  color: var(--neutral-100);
   border-radius: 0.5rem;
   display: grid;
 }
@@ -159,6 +157,7 @@ p {
 .card p {
   justify-self: start;
   align-self: end;
+  color: var(--neutral-100);
 }
 
 .banner {
@@ -204,7 +203,39 @@ p {
   gap: 2.5rem;
 }
 
+/* Utilities */
+
+.btn-1 {
+  color: var(--neutral-100);
+  background-color: var(--neutral-900);
+  border-color: var(--neutral-900);
+  border-style: solid;
+}
+
+.btn-2 {
+  color: var(--neutral-100);
+  background-color: var(--primary-red);
+  border-color: var(--primary-red);
+  border-style: solid;
+}
+
 /* Elements */
+
+.btn {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+  padding: clamp(0.5rem, calc(0.37rem + 0.56vw), 0.88rem)
+    clamp(1.69rem, calc(1.29rem + 1.69vw), 2.81rem);
+  border-radius: 2.8rem;
+}
+.arrow {
+  padding: 1.4rem;
+  border-radius: 50%;
+}
+
+.banner__logo {
+  height: clamp(3rem, calc(2.65rem + 1.5vw), 4rem);
+}
 
 .card__img {
   align-self: start;
@@ -215,6 +246,16 @@ p {
   max-height: clamp(18.75rem, calc(16.16rem + 12.95vw), 27.81rem);
   margin-bottom: clamp(2.5rem, calc(5rem + -10.67vw), 0rem);
   align-self: center;
+}
+
+.introduction h1 {
+  margin-bottom: clamp(1rem, calc(0.85rem + 0.66vw), 1.44rem);
+}
+
+.introduction p {
+  margin-left: clamp(1.81rem, calc(2.21rem + -1.69vw), 0.69rem);
+  margin-right: clamp(1.81rem, calc(2.21rem + -1.69vw), 0.69rem);
+  margin-bottom: clamp(2rem, calc(0.94rem + 4.51vw), 5rem);
 }
 
 .designer h2 {
@@ -243,6 +284,8 @@ p {
 
 /* Media queries */
 
+/* 750px and above */
+
 @media screen and (min-width: 750px) {
   .services {
     grid-template-columns: repeat(4, auto);
@@ -266,6 +309,8 @@ p {
   }
 }
 
+/* 1440px and above */
+
 @media screen and (min-width: 1440px) {
   .services {
     grid-template-columns: repeat(6, auto);
@@ -276,6 +321,8 @@ p {
     margin-right: 7.813rem;
   }
 }
+
+/* Between 750px and 1440px */
 
 @media (min-width: 750px) and (max-width: 1440px) {
   .designer {
@@ -290,5 +337,3 @@ p {
     max-width: 50%;
   }
 }
-
-@media (min-width: 750px) and (max-width: 1440px);
