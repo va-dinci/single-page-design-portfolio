@@ -311,6 +311,7 @@ p {
   justify-self: start;
   align-self: end;
   color: var(--neutral-100);
+  line-height: initial;
 }
 
 .contact button {
