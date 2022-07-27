@@ -41,8 +41,8 @@
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
+ul,
+ol {
   list-style: none;
 }
 
@@ -233,13 +233,13 @@ p {
   gap: 2.5rem;
 }
 .photography {
-  background-color: var(--primary-red);
+  background-color: var(--primary-turquoise);
   grid-column: span 2;
   grid-row: span 1;
   gap: 2.5rem;
 }
 .illustrations {
-  background-color: var(--primary-turquoise);
+  background-color: var(--primary-red);
   grid-column: span 2;
   grid-row: span 1;
   gap: 2.5rem;
@@ -421,20 +421,33 @@ p {
 
   .portfolio {
     margin-bottom: 5.5rem;
+    margin-top: 0;
   }
 
   .contact {
     flex-direction: row;
-    text-align: start;
     justify-content: center;
   }
 
   .contact__textbox {
     margin-right: 11.375rem;
+    text-align: start;
   }
 
   .contact p {
     margin-bottom: 0;
+  }
+
+  .card {
+    gap: 1.25rem;
+  }
+
+  .introduction p {
+    margin: 0 12.5rem;
+  }
+
+  .designer {
+    margin-bottom: 5.5rem;
   }
 }
 
