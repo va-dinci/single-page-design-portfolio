@@ -204,6 +204,7 @@ p {
   padding: clamp(0.5rem, calc(0.37rem + 0.56vw), 0.88rem)
     clamp(1.69rem, calc(1.29rem + 1.69vw), 2.81rem);
   border-radius: 2.8rem;
+  line-height: 2;
 }
 .arrow {
   padding: 1.4rem;
@@ -253,7 +254,7 @@ p {
   text-align: center;
 }
 
-.portfolio__slide {
+.portfolio__carousel {
   display: flex;
   margin-bottom: clamp(2rem, calc(1.47rem + 2.25vw), 3.5rem);
   justify-content: center;
@@ -315,13 +316,19 @@ p {
   flex-shrink: 0;
 }
 
-.portfolio__slide li {
+.portfolio__carousel li {
   max-width: 100%;
+  display: block;
 }
-.portfolio__slide img {
+.portfolio__carousel img {
   border-radius: 0.5rem;
   max-width: 72vw;
   display: initial;
+  display: block;
+}
+
+.arrow img {
+  aspect-ratio: 1 / 1;
 }
 
 /* Utilities */
@@ -329,15 +336,13 @@ p {
 .btn-1 {
   color: var(--neutral-100);
   background-color: var(--neutral-900);
-  border-color: var(--neutral-900);
-  border-style: solid;
+  border: none;
 }
 
 .btn-2 {
   color: var(--neutral-100);
   background-color: var(--primary-red);
-  border-color: var(--primary-red);
-  border-style: solid;
+  border: none;
 }
 
 /* Pseudo elements */
@@ -345,19 +350,33 @@ p {
 .btn-1:hover {
   color: var(--neutral-100);
   background-color: var(--primary-blue);
-  border-color: var(--primary-blue);
-  border-style: solid;
 }
 
 .btn-2:hover {
   color: var(--neutral-100);
   background-color: var(--primary-orange);
-  border-color: var(--primary-orange);
-  border-style: solid;
 }
 
-.portfolio__slide li:not(:last-child) {
+.btn-1:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.btn-2:active {
+  box-shadow: rgba(93, 89, 50, 0.25) 0px 30px 60px -12px inset,
+    rgba(77, 52, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.portfolio__carousel li:not(:last-child) {
   margin-right: clamp(0.94rem, calc(0.61rem + 1.41vw), 1.88rem);
+}
+
+.arrow:first-of-type {
+  margin-right: 0.5rem;
+}
+
+.arrow:last-of-type {
+  margin-left: 0.5rem;
 }
 
 /* Media queries */
@@ -417,6 +436,7 @@ p {
     margin-bottom: 0;
   }
 }
+
 /* Between 750px and 1440px */
 
 @media (min-width: 750px) and (max-width: 1439px) {
