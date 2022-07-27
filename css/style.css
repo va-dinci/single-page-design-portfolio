@@ -242,7 +242,7 @@ p {
   background-color: var(--primary-red);
   grid-column: span 2;
   grid-row: span 1;
-  gap: 2.5rem;
+  gap: 1rem;
 }
 .motion-graphics {
   background-color: var(--primary-violet);
@@ -439,10 +439,6 @@ p {
     margin-bottom: 0;
   }
 
-  .card {
-    gap: 1.25rem;
-  }
-
   .introduction p {
     margin: 0 12.5rem;
   }
@@ -453,6 +449,10 @@ p {
 
   .designer {
     margin-bottom: 5.5rem;
+  }
+
+  .motion-graphics {
+    gap: 1rem;
   }
 }
 
