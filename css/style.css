@@ -202,7 +202,7 @@ p {
 .btn {
   font-size: var(--fs-300);
   font-weight: var(--fw-bold);
-  padding: clamp(0.5rem, calc(0.37rem + 0.56vw), 0.88rem)
+  padding: clamp(0.5rem, calc(0.37rem + 0.56vw), 0.78rem)
     clamp(1.69rem, calc(1.29rem + 1.69vw), 2.81rem);
   border-radius: 2.8rem;
   line-height: 2;
@@ -413,6 +413,7 @@ p {
   .services {
     grid-template-columns: repeat(6, auto);
     grid-template-rows: repeat(2, auto);
+    margin-top: 0;
   }
 
   .designer img {
@@ -444,6 +445,10 @@ p {
 
   .introduction p {
     margin: 0 12.5rem;
+  }
+
+  .introduction {
+    margin-bottom: 5rem;
   }
 
   .designer {
